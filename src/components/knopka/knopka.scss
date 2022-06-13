@@ -1,0 +1,43 @@
+@import '../../assets/css/var.scss';
+
+.knopka {
+    &__telegram,
+    &__phone {
+        position: fixed;
+        bottom: 110px;
+        right: 30px;
+        background-color: $blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        border-radius: 50%;
+        z-index: 1000;
+        &::before {
+            content: '';
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            animation-name: knopka;  
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            background-color: $blue;
+            border-radius: 50%;
+        }
+        img {
+            width: 40px;
+            height: 40px;
+            filter: brightness(1) invert(1);
+        }
+    }
+    &__telegram {
+        bottom: 200px;
+        right: 30px;
+    }
+
+
+    @keyframes knopka {
+        0% {transform: scale(1); opacity: 1;}
+        100% {transform: scale(1.5); opacity: 0;}
+    }
+}

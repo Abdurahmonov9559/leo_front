@@ -1,0 +1,18 @@
+@import '../../assets/css/var.scss';
+
+.col3 .card {
+    @include fb(25%);
+}
+
+@media (max-width:1024px){
+    .col3 .card {
+        @include fb(33.33%);
+        margin-bottom: 30px;
+    }
+}
+@media (max-width:1023px){
+    .col3 .card {
+        @include fb(50%);
+        margin-bottom: 30px;
+    }
+}
